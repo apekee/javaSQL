@@ -1,0 +1,24 @@
+group 'javaSQL'
+version '1'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'mysql', name: 'mysql-connector-java', version: '5.1.38'
+    }
+}
+
+dependencies {
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.38'
+    compile group: 'org.json', name: 'json', version: '20160212'
+}
